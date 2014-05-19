@@ -1,0 +1,15 @@
+<%= form_for @event do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :start_time %>
+  <%= f.time_field :start_time %>
+
+
+  <%= f.label :band_id %>
+  <%= f.collection_select :band_id, Band.all, :name, :name %>
+
+
+
+  <%= f.submit "Submit" %>
+<% end %>

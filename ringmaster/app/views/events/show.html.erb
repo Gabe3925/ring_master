@@ -1,0 +1,13 @@
+<h1>Event Information...</h1><br>
+<hr>
+
+<p>Event Date: <h1><%= @event.date %></p><br>
+<p>Start Time: <h1><%= @event.start_time %></p><br>
+
+<p>Venue: <h1><%= @event.venue_id %></p><br>
+<p>Band: <h1><%= @event.band_id %></p><br>
+
+<hr>
+<p><%= link_to "Edit Event", edit_event_path(@event) %></p>
+delete event button here
+<p><%= link_to "Return to All Venues", venues_path %></p>

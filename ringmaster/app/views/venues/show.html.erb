@@ -1,0 +1,12 @@
+<h1>Venue Details...</h1><br>
+<hr>
+
+<p>Venue Name: <h1><%= @venue.name %></h1></p><br>
+<p>Location: <h1><%= @venue.city %>, <%= @venue.state %></h1></p><br>
+<p>Kid Friendly: <h1><%= @venue.kid_friendly %></h1></p><br>
+
+<hr>
+
+<p><%= link_to "Create An Event", new_event_path(@event) %></p>
+<p><%= link_to "Delete this Venue", venue_path %></p>
+<p><%= link_to "All Venues", venues_path %></p>

@@ -1,0 +1,23 @@
+<h1>RingMaster</h1>
+<hr>
+
+----------- LIST OF VENUES ---------<br>
+<% @venues.each do |venue| %>
+  <%= link_to venue.name, venue %>
+<% end %>
+------------------------------------<br>
+
+<%= link_to "Add A New Venue", new_venue_path %>
+
+<%= link_to "Add A New Band", new_band_path %>
+
+Search all events by date button here
+
+
+
+
+
+  <!--List All Venues
+  <!--Create Venue
+  <!--Create Band
+  <!--Search All Events By Date

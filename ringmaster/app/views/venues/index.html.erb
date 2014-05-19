@@ -1,0 +1,37 @@
+<h1>RingMaster</h1>
+<hr>
+
+<hr><br>
+----------- LIST OF VENUES ---------<br>
+<% @venues.each do |venue| %>
+  <li><%= link_to venue.name, venue %></li><br>
+<% end %>
+------------------------------------<br>
+
+<%= link_to "Add A New Venue...", new_venue_path %><!-- should get venue form -->
+button doing the same thing:
+
+<%= button_to "Add a New Venue", new_venue_path, :class => "button", :method => :get  %>
+
+<%= link_to "Add A New Band...", new_band_path %><!-- should get band form -->
+button doing the same thing:
+
+<%= button_to "Add a New Band", new_band_path, :class => "button", :method => :get  %>
+(turns out buttons are POST by default!)
+
+<hr>
+
+<h1>Search for an Event by Date:</h1><br>
+
+<%= form_tag events_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+
+<br>
+<hr>
+
+
