@@ -1,0 +1,10 @@
+
+
+----------- LIST OF EVENTS ---------<br>
+<% @events.each do |event| %>
+  <%= link_to event.date, event %>
+<% end %>
+------------------------------------<br>
+
+<%= link_to "Add A New Event", new_venue_path %>
+
